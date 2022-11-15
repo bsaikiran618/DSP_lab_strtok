@@ -3,6 +3,7 @@
 
 int checkMatch(char c, const char * delimiters)
 {
+	//check if the character is a delimiter
 	for(int i = 0; delimiters[i] != '\0'; i++)
 	{
 		if(delimiters[i] == c)
@@ -16,6 +17,7 @@ int checkMatch(char c, const char * delimiters)
 
 char * my_strtok(char * original, const char * delimiters)
 {
+	//token start is the pointer from which we start looking for the next token
 	static char * tokenStart = NULL;
 
 	//if the original is a new string, reset the tokenStart pointer to its beginning.
